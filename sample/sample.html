@@ -3,8 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style>
+        a {
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        a:focus, a:hover {
+            text-decoration: underline;
+        }
+
+        .popup {
+            display: none;
+            border-radius: 5px;
+            position: relative;
+            padding: 1em;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .popup-close:before {
+            content: ' X ';
+        }
+    </style>
 </head>
 <body>
 
+<a href="#1st-popup">popup</a>
+
+<div id="1st-popup" class="popup" style="width: 800px; height: 800px; background: lightblue;">
+    <h1>1st-popup</h1>
+    <a href="#2nd-popup">popup</a>
+</div>
+
+<div id="2nd-popup" class="popup" style="width: 600px; height: 600px; background: lightpink;">
+    <div id="2nd-popup-close" class="popup-close"></div>
+    <h2>2nd-popup</h2>
+    <a href="#3rd-popup">popup</a>
+</div>
+
+<div id="3rd-popup" class="popup" style="width: 400px; height: 400px; background: lightyellow;">
+    <div id="3rd-popup-close" class="popup-close"></div>
+    <h3>3rd-popup</h3>
+</div>
+
+<div id="scripts">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+            src="https://cdn.rawgit.com/tinywind/leanModal.js/master/jquery.leanModal.js"></script>
+    <script type="text/javascript">
+        $('a[href="#1st-popup"]').leanModal({closeButton: ".lean-overlay"});
+        $('a[href="#2nd-popup"]').leanModal({closeButton: $('#2nd-popup-close')});
+        $('a[href="#3rd-popup"]').leanModal({closeButton: '#3rd-popup-close'});
+    </script>
+</div>
 </body>
 </html>
