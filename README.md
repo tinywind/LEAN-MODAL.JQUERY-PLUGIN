@@ -6,6 +6,8 @@ Origin: https://github.com/FinelySliced/leanModal.js __(http://leanmodal.finelys
   
  Built for all the short dialogs, alerts, panels and such associated with an app, that you may want to handle in a modal window. Designed to handle hidden content, and doesn't apply any styles to the target element, other than for displaying and positioning.
  
+ ![capture](https://raw.githubusercontent.com/tinywind/leanModal.js/master/capture.png "comment")
+ 
 # Propose
 * support stacked popup
 
