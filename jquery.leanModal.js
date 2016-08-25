@@ -103,6 +103,7 @@
                     display: "none",
                     position: "absolute",
                     left: 50 + "%",
+                    'overflow-y': 'auto',
                     'margin-left': -(modal.outerWidth() / 2) + "px"
                 }).detach().appendTo(overlayContainer);
 
